@@ -4,7 +4,7 @@
         body {
             margin: 0;
             padding: 0;
-            background: url("dna1.jpg") center fixed /* Expanding html at 100% ia enough to
+            background: url("dna2.jpg") center fixed /* Expanding html at 100% ia enough to
             cover the entire page with the background image, but center + fix allows responsive scaling of the image
             when you make the browser window larger or smaller and is thus preferred.*/ ;
             background-repeat: no-repeat;
