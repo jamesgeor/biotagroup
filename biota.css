@@ -129,13 +129,17 @@
             animation-duration: 3s;
             /* margin-bottom keeps the .mainbox at steady distance from nav, otherwise nav will fall upon it when descending. */
             margin-bottom: 80px;
+            margin-top: 10px;
             animation-fill-mode: forwards;
 
         }
 
         .maincontainer {
-            transform: translateY(50%);
             text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
         }
 
         /* h1 {
@@ -143,11 +147,13 @@
 
         } */
 
+
         button {
             padding: 10px 20px;
             border: 1px solid blanchedalmond;
             border-radius: 10px;
-            position: relative;}
+            position: relative;
+        }
 
         button a {
             color: black;
@@ -156,7 +162,7 @@
         }
 
 
-        button a::after {
+       button a::after {
             content: "";
             position: absolute;
             border-bottom: 5px solid transparent;
@@ -201,4 +207,3 @@
         header span:hover header {
             background-color: teal;
         } */
-        
