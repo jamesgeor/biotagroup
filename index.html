@@ -13,7 +13,7 @@
         <nav>
             <a onclick="biotalogoload();" onmouseenter="rotara()" onmouseleave="zeroing()" href="biota.html"><img src="phylocircle22.png">
                 <h2 class="titlaki">Biota Group</h2></a>
-            <a href="biotafacilities.html" style="margin-left: 20px;">Facilities</a>
+            <a href="biotafacilities.html">Facilities</a>
             <a onclick="biotalogoload()">Projects</a>
             <a href="biotabout.html" target="iframea" onclick="biotalogoload(); whereweare='about'">About</a>
             <a href="#">Contact</a>
@@ -23,7 +23,7 @@
         <div class="maincontainer">
             <h1>Biota Group</h1>
             
-            <div class="buttonaki"><button><a href="biotabout.html">We Are All</a></button></div>
+            <div class="buttonaki" onclick="loading();"><a>We Are All</a></div>
         </div>
 
         <script>
@@ -36,9 +36,7 @@
             
             var divaki = document.querySelector("nav a img");
             var rotated = false;
-            var whereweare = 'home';
-            var iframe = document.querySelector("iframe");
-            var whatochange;
+            var circle = document.querySelector(".buttonaki");
 
             function rotara() {
                 if (!rotated) {
@@ -58,20 +56,9 @@
                 setTimeout(function () { divaki.classList.remove("loadingbiota2") }, 2001);
             }
 
-            function wheretogohome() {
-                if (whereweare=='home') {                    
-                }
-
-                else if (whereweare=='about') {
-                    whatochange = iframe.contentWindow.document.querySelector(".maincontainer");
-                    whatochange.classList.remove("maincontainer");
-                    whatochange.classList.add("maincontainer");
-                }
-                
-            }
-
-            function wheretogoabout() {
-
+            function loading() {
+                circle.classList.add("buttonloading");
+                biotalogoload();
             }
 
         </script>
