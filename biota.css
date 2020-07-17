@@ -1,6 +1,12 @@
         * {color: white;
         box-sizing: border-box;}
 
+        iframe {
+            width: 100vw;
+            height: 100%;
+            border: none;
+        }
+
         body {
             margin: 0;
             padding: 0;
@@ -25,13 +31,62 @@
             text-decoration: none;
         }
 
-        nav a img {
-            height: 70px;
+        nav a::after {
+            content: "";
+            border: 4px solid black;
+            position: absolute;
+            top: 450%;
+            transition: 1s;
+        
         }
 
-        nav a:nth-of-type(2) {
+        nav a:hover::after {
+            right: 0;
+            border: 20px;
+        }
+
+        nav a h2 {
+            display: inline;
+            position: relative;
+            top: 16px;
+            right: -14px;
+        }
+
+        nav a img {
+            height: 70px;
+            text-align: center;
+            float: left;
+            position: relative;
+
+        }
+
+      /*  nav a img:hover {
+            transform: rotate(360deg);
+            transition: 2s;
+        } */
+
+        .rotaraki {
+            transform: rotate(360deg);
+            transition: 1s;
+        }
+
+
+        .loadingbiota2 {
+            animation-name: biotalogokeyframe2;
+            animation-duration: 2s;
+        }
+
+        @keyframes biotalogokeyframe2 {
+            0% {left: 0; top: 0;}
+            20% {left:50vw; top:40vh;}
+            60% {left:50vw; top:40vh; transform: scale(800%);}
+            80% {left:50vw; top:40vh; transform: scale(100%)}
+            100% {left: 0; top: 0;}
+        }
+
+
+        nav a:first-of-type {
             padding: 0;
-            margin-left: 10px;
         }
 
         nav a:last-of-type {
@@ -146,3 +201,4 @@
         header span:hover header {
             background-color: teal;
         } */
+        
