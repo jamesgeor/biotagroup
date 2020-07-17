@@ -11,20 +11,16 @@
        non-virology research has been ceased and resources have been redirected to the said department until further notice.
     <span onclick="rev()"></span></header>
         <nav>
-            <a href="biota.html"><img src="phylocircle22.png"></a>
-            <a href="biota.html"><h2 class="titlaki"></h2>Biota Group</h2></a>
+            <a onclick="biotalogoload(); whereweare='home'" href="biotamainframehome.html" target="iframea" onmouseenter="rotara()" onmouseleave="zeroing()"><img src="phylocircle22.png">
+                <h2 class="titlaki">Biota Group</h2></a>
             <a href="biotafacilities.html" style="margin-left: 20px;">Facilities</a>
-            <a href="">Projects</a>
-            <a href="biotabout.html">About</a>
+            <a onclick="biotalogoload()">Projects</a>
+            <a href="biotabout.html" target="iframea" onclick="biotalogoload(); whereweare='about'">About</a>
             <a href="#">Contact</a>
             <a href="#">COVID-19 Emergency Fund</a>
         </nav>
 
-        <div class="maincontainer">
-            <h1>Biota Group</h1>
-
-            <button><a href="biotabout.html">We Are All</a></button>
-        </div>
+        <iframe src="biotamainframehome.html" name="iframea"></iframe>
 
         <script>
             function rev() {
@@ -32,8 +28,42 @@
                 document.getElementById("head").style.webkitAnimationIterationCount = "2";
                 document.getElementsByTagName("nav")[0].style.animationDirection = "alternate";
                 document.getElementsByTagName("nav")[0].style.webkitAnimationIterationCount = "2";
-
             }
+            
+            var divaki = document.querySelector("nav a img");
+            var rotated = false;
+            var whereweare = 'home';
+
+            function rotara() {
+                if (!rotated) {
+                divaki.classList.add("rotaraki");
+                rotated = !rotated;
+                setTimeout(function () { divaki.classList.remove("rotaraki") }, 1001);
+                }
+            }
+
+            function zeroing() {
+               setTimeout(function () { rotated = !rotated }, 501)
+            }
+
+            function biotalogoload() {
+                rotara();
+                divaki.classList.add("loadingbiota2");
+                setTimeout(function () { divaki.classList.remove("loadingbiota2") }, 2001);
+            }
+
+            function wheretogohome() {
+                if (whereweare='home') {                    
+                }
+
+                else if (whereweare='about') {    
+                }
+                
+            }
+
+            function wheretogoabout() {
+            }
+
         </script>
 
 </body>
