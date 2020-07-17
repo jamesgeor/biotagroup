@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biota Group</title>
+    <link rel="stylesheet" href="biota.css">
+</head>
+<body>
+    <header id="head"> Due to the emergency lockdown procedures to our worldwide facilities because of the COVID-19 pandemic, our
+       non-virology research has been ceased and resources have been redirected to the said department until further notice.
+    <span onclick="rev()"></span></header>
+        <nav>
+            <a href="biota.html"><img src="phylocircle22.png"></a>
+            <a href="biota.html"><h2 class="titlaki"></h2>Biota Group</h2></a>
+            <a href="biotafacilities.html" style="margin-left: 20px;">Facilities</a>
+            <a href="">Projects</a>
+            <a href="biotabout.html">About</a>
+            <a href="#">Contact</a>
+            <a href="#">COVID-19 Emergency Fund</a>
+        </nav>
+
+        <div class="maincontainer">
+            <h1>Biota Group</h1>
+
+            <button><a href="biotabout.html">We Are All</a></button>
+        </div>
+
+        <script>
+            function rev() {
+                document.getElementById("head").style.animationDirection = "alternate";
+                document.getElementById("head").style.webkitAnimationIterationCount = "2";
+                document.getElementsByTagName("nav")[0].style.animationDirection = "alternate";
+                document.getElementsByTagName("nav")[0].style.webkitAnimationIterationCount = "2";
+
+            }
+        </script>
+
+</body>
+
+</html>
