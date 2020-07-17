@@ -1,0 +1,142 @@
+        * {color: white;
+
+      }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background: url("dna1.jpg") center fixed /* Expanding html at 100% ia enough to
+            cover the entire page with the background image, but center + fix allows responsive scaling of the image
+            when you make the browser window larger or smaller and is thus preferred.*/ ;
+            background-repeat: no-repeat;
+            background-size: cover; 
+        }
+
+        html, body {
+            height: 100%;
+        }
+
+        @keyframes droppingdown {
+            from {bottom: 80px;}
+            to {bottom: 0;}
+        }
+
+        nav {
+            padding: 5px;
+            position: relative;
+            animation-name: droppingdown;
+            animation-duration: 3s;
+            /* margin-bottom keeps the .mainbox at steady distance from nav, otherwise nav will fall upon it when descending. */
+            margin-bottom: 80px;
+            animation-fill-mode: forwards;
+        }
+
+        nav a {
+            float: left;
+            padding: 22px;
+            text-decoration: none;
+        }
+
+        nav a:first-of-type {
+            padding: 0;
+            margin-left: 10px;
+        }
+
+        nav a:last-of-type {
+            float: right;
+            background-color: #0d4d5f;
+            border-radius: 10px;
+        }
+
+        nav a:hover:not(:first-of-type) {
+            background-color:rgba(0, 215, 208, 0.5);
+            transition-property:  background-color, color;
+            transition-duration: 1s;
+            border-radius: 10px;
+        }
+
+        nav a:hover:last-of-type {
+            background-color: #00d7d0;
+            color: black;
+        }
+
+        nav {
+            position: relative;
+            animation-name: droppingdown;
+            animation-duration: 2s;
+            /* margin-bottom keeps the .mainbox at steady distance from nav, otherwise nav will fall upon it when descending. */
+            margin-bottom: 80px;
+            animation-fill-mode: forwards;
+
+        }
+
+        .maincontainer {
+            text-align: center;
+            background-color: rgba(3, 9, 16, 0.7);
+            padding: 50px 0;
+            overflow: hidden; }
+
+        .imgcontainer {
+            height: 250px;
+            width: 25%;
+            /* If we don't put transparent border, borders will be created when we hover the
+            pictures, creating a distortion of the imgcontainer. But with transparent borders,
+            the borders are always there, just ... invisible! */
+            border: 5px solid transparent;
+            margin: 5px;
+            position: relative;
+        }
+
+        .imgcontainer img {
+            height: 75%;
+            width: 100%;
+        }
+
+        .bcontainertop, .bcontaineright, .bcontainerbottom, .bcontainerleft {
+            width: 255px;
+            position: absolute;
+            animation-duration: 3s;
+            animation-fill-mode: forwards;
+        }
+
+        .imgcontainer:hover.bcontainertop {
+            border-top: 5px solid green;
+            animation-name: circlingtop;
+
+        }
+
+        .bcontaineright {
+            border-right: 5px solid green;
+            animation-name: circlingright;
+
+        }
+
+        .bcontainerbottom {
+            border-bottom: 5px solid green;
+            animation-name: circlingbottom;
+        }
+
+        .bcontainerleft {
+            border-left: 15px solid green;
+            animation-name: circlingleft;
+        }
+
+        @keyframes circlingtop {
+            from {right: 150%;}
+            to {right: 0;}
+        }
+
+        @keyframes circlingright {
+            from {top: 1000px;}
+            to {top: 0;}
+        }
+
+        @keyframes circlingbottom {
+            from {left: 1000px;}
+            to {left:0;}
+        }
+
+        @keyframes circlingleft {
+            from {bottom: 1000px;}
+            to {bottom: 0;}
+        }
