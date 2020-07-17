@@ -11,7 +11,7 @@
        non-virology research has been ceased and resources have been redirected to the said department until further notice.
     <span onclick="rev()"></span></header>
         <nav>
-            <a onclick="biotalogoload(); whereweare='home'" href="biotamainframehome.html" target="iframea" onmouseenter="rotara()" onmouseleave="zeroing()"><img src="phylocircle22.png">
+            <a onclick="biotalogoload();" onmouseenter="rotara()" onmouseleave="zeroing()" href="biota.html"><img src="phylocircle22.png">
                 <h2 class="titlaki">Biota Group</h2></a>
             <a href="biotafacilities.html" style="margin-left: 20px;">Facilities</a>
             <a onclick="biotalogoload()">Projects</a>
@@ -20,19 +20,25 @@
             <a href="#">COVID-19 Emergency Fund</a>
         </nav>
 
-        <iframe src="biotamainframehome.html" name="iframea"></iframe>
+        <div class="maincontainer">
+            <h1>Biota Group</h1>
+            
+            <div class="buttonaki"><button><a href="biotabout.html">We Are All</a></button></div>
+        </div>
 
         <script>
             function rev() {
                 document.getElementById("head").style.animationDirection = "alternate";
+                document.querySelector("nav").style.animationDirection = "alternate";
                 document.getElementById("head").style.webkitAnimationIterationCount = "2";
-                document.getElementsByTagName("nav")[0].style.animationDirection = "alternate";
-                document.getElementsByTagName("nav")[0].style.webkitAnimationIterationCount = "2";
+                document.querySelector("nav").style.webkitAnimationIterationCount = "2";
             }
             
             var divaki = document.querySelector("nav a img");
             var rotated = false;
             var whereweare = 'home';
+            var iframe = document.querySelector("iframe");
+            var whatochange;
 
             function rotara() {
                 if (!rotated) {
@@ -53,15 +59,19 @@
             }
 
             function wheretogohome() {
-                if (whereweare='home') {                    
+                if (whereweare=='home') {                    
                 }
 
-                else if (whereweare='about') {    
+                else if (whereweare=='about') {
+                    whatochange = iframe.contentWindow.document.querySelector(".maincontainer");
+                    whatochange.classList.remove("maincontainer");
+                    whatochange.classList.add("maincontainer");
                 }
                 
             }
 
             function wheretogoabout() {
+
             }
 
         </script>
