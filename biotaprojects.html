@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biota About</title>
+    <link rel="stylesheet" href="biotabout.css">
+</head>
+<body>
+        <nav>
+            <img src="phylocircle22.png">
+            <a onclick="loading(); directing('index.html')" onmouseenter="rotara()" onmouseleave="zeroing()">
+                <h2 class="titlaki">Biota Group</h2>
+            </a>
+            <a href="biotafacilities.html">Facilities</a>
+            <a onclick="biotalogoload()">Projects</a>
+            <a href="biotabout.html" onclick="biotalogoload();">About</a>
+            <a href="#">Contact</a>
+            <a href="#">MICI pandemic</a>
+        </nav>
+
+        <div class="maincontainer">
+<div class="submaster"> <span>We Are Biota.</span> <span>|</span> <span>We Are Life<span id="smallcircle">.</span></span> <span>|</span> <span>We Are All.</span></div>
+<p>In phylogenetics, <span>biota</span> is a synonym of life, the highest taxonomic superdomain in
+    which all life on Earth is classified at.</p>
+
+<p>Biota Group was incorporated in Oslo, Norway, 1931 by three brothers with special interest in
+    biological research, phylogenetics and humanitarianism. Spanning more than a century of continuous
+    existence in the field of medicine and research, Biota established itself in multiple,
+    interdisciplinary fields, ever-forming and influencing our group's goal: the redefinition
+    of humanity and the establishment of a post-scarcity world with global and most affordable access not
+    only to healthcare but also well-being, self-improvement and transcendence of
+    biological contstraints.  
+</p>
+
+<p>Our group, loyal to the beliefs and ideology of the founders of Biota, incorporates the most
+    advanced, experimental and cutting-edge techniques and practices for the continuous
+    benefit of mankind and offers the freedom the modern human craves for, bulldozing the limitations of
+    Earth's evolution.
+</p>
+
+</div>
+
+        <script>
+
+            var divaki = document.querySelector("img");
+            var rotated = false;
+            var circle = document.querySelector("#smallcircle");
+
+            function rotara() {
+                if (!rotated) {
+                    divaki.classList.add("rotaraki");
+                    rotated = !rotated;
+                    setTimeout(function () { divaki.classList.remove("rotaraki") }, 1001);
+                }
+            }
+
+            function zeroing() {
+                setTimeout(function () { rotated = !rotated }, 501)
+            }
+
+            function biotalogoload() {
+                rotara();
+                divaki.classList.add("loadingbiota2");
+                setTimeout(function () { divaki.classList.remove("loadingbiota2") }, 4001);
+            }
+
+            function loading() {
+                circle.classList.add("buttonakiinaction1");
+                setTimeout(function () { circle.classList.add("buttonakiinaction2") }, 1001);
+                biotalogoload();
+            }
+
+            function directing(url) {
+                setTimeout(function () { window.location.href = url }, 1500)
+            }
+
+        </script>
+
+</body>
+
+</html>

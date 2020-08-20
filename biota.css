@@ -1,136 +1,5 @@
-        * {color: white;
-        box-sizing: border-box;}
 
-
-        body {
-            margin: 0;
-            padding: 0;
-            background: url("https://media.giphy.com/media/QTfa8EZ9dQAHzF4e06/giphy.gif") center fixed /* Expanding html at 100% ia enough to
-            cover the entire page with the background image, but center + fix allows responsive scaling of the image
-            when you make the browser window larger or smaller and is thus preferred.*/ ;
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-
-        html, body {
-            height: 100%;
-        }
-
-        nav {
-            padding: 5px;
-            position: relative;
-        }
-
-        nav a {
-            padding: 22px;
-            text-decoration: none;
-/* Without relative position, the next selector will be directing all ::after boxes in relation
-to the body, each one stockpiled on the other, making them all but one invisible. With relative
-position for each respective anchor element, our ::after boxes will be all visible and have equal
-positioning when compared in respect to their anchor elements. Remember that when you declare
-absolute position, you need to declare its relative as well. If you don't, <body> element is chosen. */
-            position: relative;
-            top: 14px;
-            z-index: 2;
-
-/* Hidden overflow allows us to position the ::after boxes a bit outside of the anchor element
-and keep them invisible there, so as to animate them, sweeping in the stage! */
-            overflow: hidden;
-        }
-
-         nav a:not(:first-of-type)::after {
-            content: "";
-            border: 4px solid black;
-            position: absolute;
-            transition: 1s;
-/* Without declaring the starting position (0), the transition specified with the next selector
-will be made abruptly, ignoring the transition property. Remember that when transitions and animations
-don't work smoothly and translocate themselves instaneously, you have omitted the starting position */
-            right: 100%;
-/* Remember that you are giving the ABSOLUTE coordinates of the ::after box in respect to its anchor
-element. 18px margin-top is NOT equal to 18px top. 18px from top means 18px from the top side of the
-anchor, while 18px margin-top means 18px from the RELATIVE/DEFAULT vertical position of the ::after box (where
-it sits when its position is set to absolute but we haven't set any coordinates for it)! In this
-case, 18px is the height of the CONTENT of the anchor element (the anchor element height is 62px).
-By setting the following, we bring the ::after box right below the CONTENT of the anchor element! */
-            margin-top: 18px;
-            padding-right: 6em;
-        }
-
-        nav a:not(:first-of-type):hover::after {
-            right: 0;
-        }
-
-
-        nav a h2 {
-            display: inline;
-            position: relative;
-            right: -14px;
-            margin-right: 2em;
-        }
-
-        nav a img {
-            height: 70px;
-            text-align: center;
-            float: left;
-            position: relative;
-
-        }
-
-      /*  nav a img:hover {
-            transform: rotate(360deg);
-            transition: 2s;
-        } */
-
-        .rotaraki {
-            transform: rotate(360deg);
-            transition: 1s;
-        }
-
-
-        .loadingbiota2 {
-            animation-name: biotalogokeyframe2;
-            animation-duration: 2s;
-        }
-
-        @keyframes biotalogokeyframe2 {
-            0% {left: 0; top: 0;}
-            20% {left:50vw; top:40vh;}
-            60% {left:50vw; top:40vh; transform: scale(800%);}
-            80% {left:50vw; top:40vh; transform: scale(100%)}
-            100% {left: 0; top: 0;}
-        }
-
-
-        nav a:first-of-type {
-            padding: 0;
-        }
-
-        nav a:last-of-type {
-            float: right;
-            background-color: #144877;
-            border-radius: 10px;
-            z-index: -10;
-            top:-1px;
-        }
-
-   /*     nav a:hover:not(:first-of-type) {
-            background-color: #144877;
-            transition-property:  background-color, color;
-            transition-duration: 1s;
-            border-radius: 10px;
-        }
-
-        nav a:hover:last-of-type {
-            background-color: #00d7d0;
-            color: black;
-        } */
-
-        @keyframes droppingdown {
-            from {bottom: 80px;}
-            to {bottom: 0;}
-        }
-
+        
         header {
             padding: 20px;
             background-color: #144877;
@@ -139,19 +8,11 @@ By setting the following, we bring the ::after box right below the CONTENT of th
             position: relative;
            animation-name: droppingdown;
            animation-duration: 3s;
+           animation-iteration-count: 2;
+           animation-direction: alternate;
            animation-fill-mode: forwards;
         }
 
-        nav {
-            position: relative;
-            animation-name: droppingdown;
-            animation-duration: 3s;
-            /* margin-bottom keeps the .mainbox at steady distance from nav, otherwise nav will fall upon it when descending. */
-            margin-bottom: 80px;
-            margin-top: 10px;
-            animation-fill-mode: forwards;
-
-        }
 
         .maincontainer {
             position: absolute;
@@ -163,94 +24,39 @@ By setting the following, we bring the ::after box right below the CONTENT of th
 
         .buttonaki {
             border-radius: 50%;
-            width: 4em;
-            height: 4em;
+            width: 0.4em;
+            height: 0.4em;
+            background-color: #ffffff;
+            position: relative;
+/* Margin: auto centers the element horizontally.
+            margin: auto;  */
 /* A circle with CSS is basically a transformed rectangle. When setting marging to auto in order to
 center it in the container div, the margins fall on the edges of the circle, deleting tiny parts of it.
-The solution is to add an transparent margin! */
-            border: 1px solid transparent;
-            margin: auto;
-            background-color: antiquewhite;
+The solution is to add a transparent margin! */
+            border: 0.1px solid transparent;
             animation: standby 1s infinite alternate;
-            transition: 1s;
-            position: relative;
+            left: 105%;
+            bottom: 2.2em;
         }
+
+        .buttonakiinaction1 {
+            transition: 1s;
+            left: 50%;
+            bottom: 0;
+        }
+
+        .buttonakiinaction2 {
+            transition: 1s;
+            transform: scale(1000);
+
+        }
+
 
         @keyframes standby {
-            from {opacity: 0.2;}
-            to {opacity: 0.8;}
+            from {opacity: 0;}
+            to {opacity: 1;}
         }
 
-        .buttonaki:hover {
-            padding: 10px;
-            width: 100%;
-            border-radius: 20px;
-            transition: 1s;
-            animation: none;
-            opacity: 1;
-        }
-
-        .buttonaki a {
-            opacity: 0;
-            transition: 1s;
-            line-height: 2.5em;
-            color: black;
-            text-decoration: none;
-        }
-
-        .buttonaki:hover a {
-            opacity: 1;
-            transition: 1s;
-        }
-
-        .buttonloading {
-            transition: 2s;
-            transform: scale(5);
-        }
-
-/* Alternative button
-
-        .buttonaki {
-            padding: 10px 30px;
-            border: 1px solid #19588f;
-            background-color: #19588f;
-            border-radius: 10px;
-            position: relative;
-        }
-
-        .buttonaki a {
-            font-size: large;
-            text-decoration: none;
-        }
-
-
-       .buttonaki a::after {
-            content: "";
-            position: absolute;
-            border-bottom: 5px solid transparent;
-            border-top: 5px solid transparent;
-            border-left: 5px solid black;
-            border-right: 5px solid transparent;
-            top: 50%;
-            right: 20px;
-             margin-top cancels the height gain caused by the border and centers the content (which is a dot, since it's empty)
-            margin-top: -5px;
-            margin-left: 5px;
-            opacity: 0;
-        }
-
-            .buttonaki:hover {
-            cursor: pointer;
-        }
-
-
-            .buttonaki:hover a::after {
-            opacity: 1;
-            right: 5px;
-            transition: 1s;
-        }
-
-        */
 
         header span {
             display: inline-block;
@@ -264,6 +70,8 @@ The solution is to add an transparent margin! */
             color: white;
         }
 
+        nav a span {display: none;}
+
         /* The following CSS is invalid, because the second part of the selector should
         be inside the first one (in this example, it's the opposite of what is possible.
         Using flexbox, however, this may have a solution.
@@ -271,3 +79,47 @@ The solution is to add an transparent margin! */
         header span:hover header {
             background-color: teal;
         } */
+
+        @media screen and (max-width: 795px) {
+            img {float: none; margin: 0 10vw;}
+
+            nav {width: 30%; position: absolute;}
+
+            nav a {display: block; padding: 22px 0; text-align: center;}
+
+            nav a h2 {
+                text-align: center;
+                margin-right: 0;
+                margin-left: 0;}
+
+            nav a span {
+                display: inline;
+                background-color: #017197;
+                margin: 0;
+                padding: 0 10px;
+                border-radius: 20px;
+                animation: flashingbutton 2s infinite alternate
+            }
+
+                @keyframes flashingbutton {
+                    from {opacity: 0;}
+                    to {opacity: 1;}                    
+                }
+
+            .maincontainer {width: 25%;}
+
+
+            nav a:last-of-type {float: none; text-align: center; padding: 10px;}
+
+            header {visibility: hidden;}
+
+        }
+
+        .purge {
+            display: none;
+        }
+
+
+        @media screen and (max-width: 682px) {
+            .buttonaki {left:75%;}
+        }

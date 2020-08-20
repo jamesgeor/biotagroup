@@ -1,18 +1,4 @@
-        * {color: white;
-            box-sizing: border-box;
-      }
 
-        body {
-            margin: 0;
-            padding: 0; ;
-            background-repeat: no-repeat;
-            background-size: cover;
-            overflow: hidden;
-        }
-
-        html, body {
-            height: 100%;
-        }
 
         .maincontainer {
             position: relative;
@@ -28,12 +14,12 @@
         }
 
         @keyframes scrolling {
-            from {left:100%;}
+            from {left:200%;}
             to {left: 0;}
         }
 
         @keyframes dropping {
-            from {bottom: 1000px ;opacity: 0;}
+            from {bottom: 100vh ;opacity: 0;}
             to {bottom: 0; opacity: 1;}
         }
 
@@ -42,20 +28,62 @@
             to {right: 0;}
         }
 
-        h1 span:nth-of-type(odd) {
+        @keyframes concentration {
+            from {}
+            to {left: 50%; bottom: 50%;}
+        }
+
+        .maincontainer .words1,.words2,.words3,.dots1,.dots2,.dots3,.slashes1,.slashes2 {
+            animation-fill-mode: forwards;
             position: relative;
-            /*Because of the set delay, we need to redeclare left to 100% for the first 2s */
-            left:100%;
+        }
+
+        .maincontainer .words1,.dots1 {
             animation-duration: 3s;
+            animation-name: scrolling;
+        }
+
+        .maincontainer .words2,.dots2 {
+            animation-name: scrolling;
+            animation-duration: 5s;
+        }
+
+        .maincontainer .words3,.dots3 {
+            animation-name: scrolling;
+            animation-duration: 7s;
+        }
+
+        .maincontainer .slashes1 {
+            animation-name: dropping;
+            animation-duration: 4s;
+        }
+
+        .maincontainer .slashes2 {
+            animation-name: dropping;
+            animation-duration: 6s;
+        }
+
+        .dotsmoving {
+            position: absolute;
+            animation-name: concentration;
+            animation-duration: 3s;
+            animation-fill-mode: forwards;
+        }
+        /*
+
+        .maincontainer .words {
+            position: relative;
+            /*Because of the set delay, we need to redeclare left to 100% for the first 2s
+            left:100%;
             animation-fill-mode: forwards;
             margin: 0 10px;
 
         }
 
-        h1 span:nth-of-type(even) {
+        .maincontainer .slashes {
             position: relative;
-            /*Because of the set delay, we need to redeclare left to 100% for the first 2s */
-            bottom: 1000px;
+            /*Because of the set delay, we need to redeclare left to 100% for the first 2s
+            bottom: 50vh;
             animation-duration: 3s;
             animation-fill-mode: forwards;
             margin: 0 10px;
@@ -63,27 +91,35 @@
 
         }
 
-        h1 span:nth-of-type(1) {
+        .maincontainer .words:nth-of-type(1) {
+            color: blue;
             animation-name: scrolling;
             animation-delay: 1s;
         }
 
-        h1 span:nth-of-type(3) {
+        .maincontainer .words:nth-of-type(2) {
             animation-name: scrolling;
             animation-delay: 2s;
         }
 
-        h1 span:nth-of-type(5) {
-            animation-name: scrolling;
+        .maincontainer .words:nth-of-type(3) {
             animation-delay: 3s;
+            animation-name: scrolling;
         }
 
-        h1 span:nth-of-type(2) {
+      .maincontainer > span:nth-of-type(2) {
             animation-name: dropping;
             animation-delay: 2s;
         }
 
-        h1 span:nth-of-type(4) {
+        .maincontainer > span:nth-of-type(4) {
             animation-name: dropping;
             animation-delay: 3s;
+        }
+
+        #dots  {
+            position: absolute;
+            left: 50%;
+            bottom: 50%;
+
         }

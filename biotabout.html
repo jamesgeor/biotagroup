@@ -4,13 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Biota About</title>
+    <link rel="stylesheet" href="biotacssshared.css">
     <link rel="stylesheet" href="biotabout.css">
 </head>
-<body style="background: none;">
+<body>
+    <nav>
+        <div>
+            <img src="phylocircle22.png">
+            <a onclick="concentration(); directing('index.html')" onmouseenter="rotara()" onmouseleave="zeroing()">
+                <h2 class="titlaki">Biota Group</h2>
+            </a>
+            <a onclick="concentration(); directing('biotafacilities.html')">Facilities</a>
+            <a onclick="concentration(); directing('biotaprojects.html')">Projects</a>
+            <a onclick="concentration(); directing('biotabout.html')">About</a>
+            <a onclick="concentration(); directing('biotacontact.html')">Contact</a>
+        </div>
+        <a onclick="concentration(); directing('biotamici.html')">MICI pandemic <br><span>Learn more!</span></a>
+    </nav>
 
-        <div class="maincontainer" id="about">
-<h1> <span>We Are Biota.</span> <span>|</span> <span>We Are Life.</span> <span>|</span> <span>We Are All.</span></h1>
-<p>In phylogenetics, <span>biota</span> is a synonym of life, the highest taxonomic superdomain in
+
+        <div class="maincontainer">
+<h2><span class="words1">We Are Biota</span>
+<span class="dots1">.</span>
+<span class="slashes1">|</span>
+<span class="words2">We Are Life</span>
+<span class="dots2">.</span>
+<span class="slashes2">|</span>
+<span class="words3">We Are All</span>
+<span class="dots3">.</span> </h2>
+<p>In phylogenetics, biota is a synonym of life, the highest taxonomic superdomain in
     which all life on Earth is classified at.</p>
 
 <p>Biota Group was incorporated in Oslo, Norway, 1931 by three brothers with special interest in
@@ -23,13 +45,15 @@
 </p>
 
 <p>Our group, loyal to the beliefs and ideology of the founders of Biota, incorporates the most
-    advanced, experimental and sometimes controversial techniques and practices for the continuous
-    benefit of mankind and offers the freedom the modern man craves for, bulldozing the limitations of
+    advanced, experimental and cutting-edge techniques and practices for the continuous
+    benefit of mankind and offers the freedom the modern human craves for, bulldozing the limitations of
     Earth's evolution.
 </p>
 
 </div>
 
+<script src="biotajsshared.js"></script>
+<script src="biotajsabout.js"></script>
 </body>
 
 </html>

@@ -4,64 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Biota Group</title>
+    <link rel="stylesheet" href="biotacssshared.css">
     <link rel="stylesheet" href="biota.css">
 </head>
 <body>
-    <header id="head"> Due to the emergency lockdown procedures to our worldwide facilities because of the COVID-19 pandemic, our
-       non-virology research has been ceased and resources have been redirected to the said department until further notice.
-    <span onclick="rev()"></span></header>
-        <nav>
-            <a onclick="biotalogoload();" onmouseenter="rotara()" onmouseleave="zeroing()" href="index.html"><img src="phylocircle22.png">
+
+    <header> Due to the emergency lockdown procedures to our worldwide facilities because of the MICI
+        (Metabolic Inactivation and Cryptobiosis-Inducing) pandemic, our non-virology research has been ceased
+        and resources have been redirected to the said department until further notice. Biota Group and the rest of
+        the scientific community allocate all of their efforts, resources and ingenuity to counter this mysterious,
+        highly-infectious yet fortunately non-lethal biological agent. We urgent the public to do their part in our
+        efforts to halt this intruder from the microworld: Stay home. Stay safe.
+    <span onclick="completeheaderanimation()"></span></header>
+ 
+       <nav>
+           <div>
+            <img src="phylocircle22.png">
+            <a onclick="loading(); directing('index.html')" onmouseenter="rotara()" onmouseleave="zeroing()">
                 <h2 class="titlaki">Biota Group</h2></a>
-            <a href="biotafacilities.html">Facilities</a>
-            <a onclick="biotalogoload()">Projects</a>
-            <a href="biotabout.html" onclick="biotalogoload();">About</a>
-            <a href="#">Contact</a>
-            <a href="#">COVID-19 Emergency Fund</a>
+            <a onclick="loading(); directing('biotafacilities.html')">Facilities</a>
+            <a onclick="loading(); directing('biotaprojects.html')">Projects</a>
+            <a onclick="loading(); directing('biotabout.html')">About</a>
+            <a onclick="loading(); directing('biotacontact.html')">Contact</a>
+            </div>
+            <a onclick="loading(); directing('biotamici.html')">MICI pandemic <br><span>Learn more!</span></a>
         </nav>
 
         <div class="maincontainer">
             <h1>Biota Group</h1>
 
-            <div class="buttonaki" onclick="loading();"><a>We Are All</a></div>
+            <div class="buttonaki"></div>
         </div>
 
-        <script>
-            function rev() {
-                document.getElementById("head").style.animationDirection = "alternate";
-                document.querySelector("nav").style.animationDirection = "alternate";
-                document.getElementById("head").style.webkitAnimationIterationCount = "2";
-                document.querySelector("nav").style.webkitAnimationIterationCount = "2";
-            }
-
-            var divaki = document.querySelector("nav a img");
-            var rotated = false;
-            var circle = document.querySelector(".buttonaki");
-
-            function rotara() {
-                if (!rotated) {
-                divaki.classList.add("rotaraki");
-                rotated = !rotated;
-                setTimeout(function () { divaki.classList.remove("rotaraki") }, 1001);
-                }
-            }
-
-            function zeroing() {
-               setTimeout(function () { rotated = !rotated }, 501)
-            }
-
-            function biotalogoload() {
-                rotara();
-                divaki.classList.add("loadingbiota2");
-                setTimeout(function () { divaki.classList.remove("loadingbiota2") }, 2001);
-            }
-
-            function loading() {
-                circle.classList.add("buttonloading");
-                biotalogoload();
-            }
-
-        </script>
+        <script src="biotajsshared.js"></script>
+        <script src="biotajs.js"></script>
 
 </body>
 
