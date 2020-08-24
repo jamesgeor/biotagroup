@@ -1,0 +1,263 @@
+
+        .formoula {
+            height: 100%;
+            width: 50%;
+            margin: auto;
+        }
+
+        table {
+            width: 100%;
+        }
+
+        td:nth-of-type(odd):not(:last-of-type) {
+            animation-name: revscrolling;
+            animation-duration: 3s;
+            animation-fill-mode: forwards;
+            animation-delay: 1.5s;
+            position: relative;
+            right: 100%;
+        }
+
+        td:nth-of-type(even) {
+            animation-name: dropping;
+            animation-duration: 3s;
+            animation-fill-mode: forwards;
+            animation-delay: 1.5s;
+            position: relative;
+            bottom: 100vh;
+        }
+
+        td:nth-of-type(odd):last-of-type {
+            animation-name: emerging;
+            animation-duration: 3s;
+            animation-fill-mode: forwards;
+            animation-delay: 1.5s;
+            position: relative;
+            top: 100vh;
+        }
+
+        td .select {
+            border: 2px solid #144877;
+            width: 50%;
+            margin: auto;
+            display: inline-block;
+            position: relative;
+        }
+
+
+        td .select .options {
+            display: none;
+            position: absolute;
+            background-color: transparent;
+            width: 100%;
+            border: 2px solid #144877;
+        }
+
+        
+        .select:hover .options {
+            display: block;
+        }
+
+        td .select .options span {
+            text-align: center;
+            display: block;
+        }
+
+        td .select .options span:hover {
+            outline: 2px solid #9277b8;
+
+        }
+
+        input[type="submit"] {
+            margin: 1vw;
+            padding: 2% 5%;
+            position: relative;
+        }
+
+        input {
+            background-color: transparent;
+            border: 2px solid #144877;
+            border-radius: 10%;
+        }
+
+        input:focus {
+            border: 2px solid #9277b8;
+            outline: none;
+        }
+
+
+        .subcontainer {
+            height: 100%;
+            width: 50%;
+            margin-right: 1vw;
+        }
+
+        .subcontainer > p {
+            position: relative;
+            animation-name: scrolling;
+            animation-duration: 3s;
+            animation-fill-mode: forwards;
+            animation-delay: 0.5s;
+            left: 200%;
+        }
+
+        .subcontainer > h2 {
+            position: relative;
+            animation-name: dropping;
+            animation-duration: 3s;
+            animation-fill-mode: forwards;
+        }
+
+        .subcontainer > h3 {
+            position: relative;
+            animation-name: revscrolling;
+            animation-duration: 3s;
+            animation-fill-mode: forwards;
+        }
+
+
+        .maincontainer {
+            position: relative;
+            text-align: center;
+            background-color: rgba(3, 9, 16, 0.7);
+            padding: 50px 0;
+            overflow: hidden;
+            right:100%;
+            animation-duration: 3s;
+            animation-fill-mode: forwards;
+            animation-name: revscrolling;
+            display: flex;
+
+        }
+
+        @keyframes scrolling {
+            from {left:200%;}
+            to {left: 0;}
+        }
+
+        @keyframes dropping {
+            from {bottom: 100vh ;opacity: 0;}
+            to {bottom: 0; opacity: 1;}
+        }
+
+        @keyframes revscrolling {
+            from {right: 100%;}
+            to {right: 0;}
+        }
+
+        @keyframes concentration {
+            from {}
+            to {left: 50%; bottom: 50%;}
+
+        }
+
+        @keyframes emerging {
+            from {top: 100vh}
+            to {top: 0}
+        }
+
+        .maincontainer .words1,.words2,.words3,.dots1,.dots2,.dots3,.slashes1,.slashes2 {
+            animation-fill-mode: forwards;
+            position: relative;
+        }
+
+        .maincontainer .words1 {
+            animation-duration: 3s;
+            animation-name: scrolling;
+        }
+
+        .maincontainer .dots1 {
+            animation-duration: 4s;
+            animation-name: scrolling;
+        }
+
+        .maincontainer .words2 {
+            animation-name: scrolling;
+            animation-duration: 6s;
+        }
+
+        .maincontainer .dots2 {
+            animation-name: scrolling;
+            animation-duration: 7s;
+        }
+
+        .maincontainer .words3 {
+            animation-name: scrolling;
+            animation-duration: 7s;
+        }
+
+        .maincontainer .dots3 {
+            animation-name: scrolling;
+            animation-duration: 7s;
+        }
+
+        .maincontainer .slashes1 {
+            animation-name: dropping;
+            animation-duration: 5s;
+        }
+
+        .maincontainer .slashes2 {
+            animation-name: dropping;
+            animation-duration: 8s;
+        }
+
+        .dotsmoving {
+            position: absolute;
+            animation-name: concentration;
+            animation-duration: 3s;
+            animation-fill-mode: forwards;
+        }
+        /*
+
+        .maincontainer .words {
+            position: relative;
+            /*Because of the set delay, we need to redeclare left to 100% for the first 2s
+            left:100%;
+            animation-fill-mode: forwards;
+            margin: 0 10px;
+
+        }
+
+        .maincontainer .slashes {
+            position: relative;
+            /*Because of the set delay, we need to redeclare left to 100% for the first 2s
+            bottom: 50vh;
+            animation-duration: 3s;
+            animation-fill-mode: forwards;
+            margin: 0 10px;
+            opacity: 0;
+
+        }
+
+        .maincontainer .words:nth-of-type(1) {
+            color: blue;
+            animation-name: scrolling;
+            animation-delay: 1s;
+        }
+
+        .maincontainer .words:nth-of-type(2) {
+            animation-name: scrolling;
+            animation-delay: 2s;
+        }
+
+        .maincontainer .words:nth-of-type(3) {
+            animation-delay: 3s;
+            animation-name: scrolling;
+        }
+
+      .maincontainer > span:nth-of-type(2) {
+            animation-name: dropping;
+            animation-delay: 2s;
+        }
+
+        .maincontainer > span:nth-of-type(4) {
+            animation-name: dropping;
+            animation-delay: 3s;
+        }
+
+        #dots  {
+            position: absolute;
+            left: 50%;
+            bottom: 50%;
+
+        }

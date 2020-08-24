@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biota About</title>
+    <link rel="stylesheet" href="biotacssshared.css">
+    <link rel="stylesheet" href="biotacontact.css">
+</head>
+
+<body>
+    <nav>
+        <div>
+            <img src="phylocircle22.png">
+            <a onclick="biotalogoload(); directing('index.html')" onmouseenter="rotara()" onmouseleave="zeroing()">
+                <h2 class="titlaki">Biota Group</h2>
+            </a>
+            <a onclick="biotalogoload(); directing('biotafacilities.html')">Facilities</a>
+            <a onclick="biotalogoload(); directing('biotaprojects.html')">Projects</a>
+            <a onclick="biotalogoload(); directing('biotabout.html')">About</a>
+            <a onclick="biotalogoload(); directing('biotacontact.html')">Contact</a>
+        </div>
+        <a onclick="biotalogoload(); directing('biotamici.html')">MICI pandemic <br><span>Learn more!</span></a>
+    </nav>
+
+
+    <div class="maincontainer">
+        <div class="formoula">
+            <form method="POST" action="">
+                <table>
+                    <tr>
+                        <td>Pronunciation:</td>
+                        <td><input type="radio" name="pronounce">Mr. |
+                            <input type="radio" name="pronounce">Ms. |
+                            <input type="radio" name="pronounce"> Other</td>
+                    </tr>
+                    <tr>
+                        <td>Name:</td>
+                        <td><input type="text" name="name" required></td>
+                    </tr>
+                    <tr>
+                        <td>Surname:</td>
+                        <td><input type="text" name="surname" required></td>
+                    </tr>
+                    <tr>
+                        <td>E-mail:</td>
+                        <td><input type="email" name="email" required></td>
+                    </tr>
+                    <tr>
+                        <td>Preferred date:</td>
+                        <td><input type="date" min="2020-10-09" max="2020-12-31" step="7"><p>First available date: 10/09/2020, every Friday</p></td>
+                    </tr>
+                    <tr>
+                        <td>Tour type:</td>
+                        <td class="selection"><div class="select" onmouseenter= "hidesubmit()" onmouseleave = "showsubmit()">
+                            <span class="pleaseselect">Please select...</span>
+                                <div class="options">
+                                    <span onclick="takevalue(this)">School</span>
+                                    <span onclick="takevalue(this)">Tourist</span>
+                                    <span onclick="takevalue(this)">General</span>
+                            </div></div></td>
+                    </tr>
+                    <tr><td colspan="2" class="tdsubmit"><input type="submit" value="Submit" class="submit"></td></tr>
+                </table>
+
+            </form>
+        </div>
+        <div class="subcontainer">
+            <h2>Biota Group HQ</h2>
+            <h3>Oslo, Norway</h3>
+            <p>Biota Group's headquarters are located in the capital of The Kingdom of Norway, Oslo, ever
+                since the company's incorporation in 1931. The complex spans more than 50km<sup>2</sup> of surface and
+                covers almost the entire, privately owned island of Ulvøya.
+                A completely self-sufficient structure, the only one in the country with zero ecological footpint and
+                awarded multiple times as
+                the capital's busiest building, it contributes up to 20% of the municipality's GDP and employs nearly
+                25% of the inhabitants of
+                the extended area.</p>
+
+            <p>Our various institutes and organizations, such as the Biota Group Institute and The Academy of
+                Alternative Economic Thinking, as
+                well as the Scandinavian branch of The Economic Possibilities For Our Grandchildren Foundation all hold
+                their quarters on Ulvøya island.</p>
+
+            <p>Interested in visiting us? We would be more than happy to show you the place! Tours can be
+                arranged every Friday free of charge with Ms. Olga Coleman, her smile and her treats. Please fill out
+                the form on your left in case you are interested. Note that educational visits have increased priority.
+            </p>
+        </div>
+    </div>
+
+    <script src="biotajsshared.js"></script>
+    <script src="biotajscontact.js"></script>
+</body>
+
+</html>

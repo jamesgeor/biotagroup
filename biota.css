@@ -15,10 +15,15 @@
 
 
         .maincontainer {
-            position: absolute;
-            top: 50%;
+            position: relative;
+            bottom: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        .maincontainer h1 {
+            display: inline-block;
         }
 
 
@@ -28,26 +33,23 @@
             height: 0.4em;
             background-color: #ffffff;
             position: relative;
-/* Margin: auto centers the element horizontally.
-            margin: auto;  */
-/* A circle with CSS is basically a transformed rectangle. When setting marging to auto in order to
-center it in the container div, the margins fall on the edges of the circle, deleting tiny parts of it.
-The solution is to add a transparent margin! */
             border: 0.1px solid transparent;
             animation: standby 1s infinite alternate;
-            left: 105%;
-            bottom: 2.2em;
+            display: inline-block;
+            /* Initial values of top and right, otherwise the animation will be abrupt. */
+            top: 0;
+            right: 0;
         }
 
         .buttonakiinaction1 {
-            transition: 1s;
-            left: 50%;
-            bottom: 0;
+            transition-duration: 1s;
+            top: 2vw;
+            right: 7%;
         }
 
         .buttonakiinaction2 {
-            transition: 1s;
             transform: scale(1000);
+            transition-duration: 1s;
 
         }
 

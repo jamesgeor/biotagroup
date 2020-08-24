@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biota About</title>
+    <link rel="stylesheet" href="biotacssshared.css">
+    <link rel="stylesheet" href="biotacontact.css">
+</head>
+<body>
+    <nav>
+        <div>
+            <img src="phylocircle22.png">
+            <a onclick="concentration(); directing('index.html')" onmouseenter="rotara()" onmouseleave="zeroing()">
+                <h2 class="titlaki">Biota Group</h2>
+            </a>
+            <a onclick="concentration(); directing('biotafacilities.html')">Facilities</a>
+            <a onclick="concentration(); directing('biotaprojects.html')">Projects</a>
+            <a onclick="concentration(); directing('biotabout.html')">About</a>
+            <a onclick="concentration(); directing('biotacontact.html')">Contact</a>
+        </div>
+        <a onclick="concentration(); directing('biotamici.html')">MICI pandemic <br><span>Learn more!</span></a>
+    </nav>
+
+
+        <div class="maincontainer">
+            <div class="location">
+                <img src="https://images.adsttc.com/media/images/5016/0b3c/28ba/0d15/9800/0883/slideshow/stringio.jpg?1414494524">
+            </div>
+            <div class="subcontainer">
+                <form method="POST" action="">
+                <h2>Biota Group HQ</h2>
+                <table>
+                   <tr>
+                    <td>Pronunciation:</td>
+                    <td><input type="radio" name="pronounce">Mr. |
+                        <input type="radio" name="pronounce">Ms. |
+                        <input type="radio" name="pronounce"> Other</td>
+                    </tr>
+                    <tr><td>Name:</td> <td><input type="text" name="name" required></td></tr>
+                    <tr><td>Surname:</td> <td><input type="text" name="surname" required></td></tr>
+                    <tr><td>E-mail:</td> <td><input type="email" name="email" required></td></tr>
+                    <tr><td>Preferred date:</td> <td><input type="date" min="2020-10-09" max="2020-12-31" step="7"></td></tr>
+                    <tr><td>Tour type:</td><td><select>
+                        <option>High School</option>
+                        <option>Tourist</option>
+                        <option>General</option>
+                    </select></td></tr>
+                </table>
+                
+                </form>
+
+</div>
+</div>
+
+<script src="biotajsshared.js"></script>
+<script src="biotajscontact.js"></script>
+</body>
+
+</html>

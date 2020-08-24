@@ -16,6 +16,9 @@ var dot = document.querySelector(".buttonaki");
 
 
 function loading() {
+    // Dot's scaling to cover the entire page makes the page much bigger. With hidden overflow,
+    // bypass this problem.
+    document.body.style.overflow = "hidden";
     dot.classList.add("buttonakiinaction1");
     setTimeout(function () { dot.classList.add("buttonakiinaction2") }, 1001);
     biotalogoload();

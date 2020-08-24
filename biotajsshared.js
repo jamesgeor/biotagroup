@@ -5,7 +5,7 @@ setTimeout(function () {
     nava.style.animationPlayState = "paused"
 }, 2501);
 
-var logo = document.querySelector("img");
+var logo = document.querySelector("nav img");
 var rotated = false;
 
 //This function adds the spinning CSS class to the site's logo and removes it after it has completed

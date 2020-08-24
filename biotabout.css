@@ -38,29 +38,44 @@
             position: relative;
         }
 
-        .maincontainer .words1,.dots1 {
+        .maincontainer .words1 {
             animation-duration: 3s;
             animation-name: scrolling;
         }
 
-        .maincontainer .words2,.dots2 {
+        .maincontainer .dots1 {
+            animation-duration: 4s;
             animation-name: scrolling;
-            animation-duration: 5s;
         }
 
-        .maincontainer .words3,.dots3 {
+        .maincontainer .words2 {
+            animation-name: scrolling;
+            animation-duration: 6s;
+        }
+
+        .maincontainer .dots2 {
+            animation-name: scrolling;
+            animation-duration: 7s;
+        }
+
+        .maincontainer .words3 {
+            animation-name: scrolling;
+            animation-duration: 7s;
+        }
+
+        .maincontainer .dots3 {
             animation-name: scrolling;
             animation-duration: 7s;
         }
 
         .maincontainer .slashes1 {
             animation-name: dropping;
-            animation-duration: 4s;
+            animation-duration: 5s;
         }
 
         .maincontainer .slashes2 {
             animation-name: dropping;
-            animation-duration: 6s;
+            animation-duration: 8s;
         }
 
         .dotsmoving {
