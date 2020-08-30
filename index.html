@@ -4,10 +4,102 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Biota Group</title>
+    <style>
+        @keyframes backscreencolors {
+            from {background-color: #001226;}
+            to {background-color: black;}
+        }
+
+        @keyframes incominglogo {
+            from {transform: scale(0);}
+            to {transform: scale(1);}
+        }
+
+        @keyframes infiniterotatinglogo {
+            from {transform: rotate(0);}
+            to {transform: rotate(360deg);}
+        }
+
+        @keyframes retreatingsuperinitialcontainer {
+            from {bottom: 0;}
+            to {bottom: 100vh;}
+        }
+        
+        * {color: white;}
+
+        body {
+            padding: 0;
+            margin: 0;
+        }
+
+        .superinitialcontainer {
+            animation-name: backscreencolors, retreatingsuperinitialcontainer;
+            animation-delay: 0s, 5s;
+            animation-duration: 0.8s;
+            animation-iteration-count: 10, 1;
+            animation-direction: alternate;
+            animation-timing-function: linear, ease-out;
+            animation-fill-mode: forwards;
+            position: absolute;
+            width: 100vw;
+            height: 100vh;
+            bottom: 0vh;
+            z-index: 10;
+        }
+
+        .incoming img {
+            display: block;
+            margin: auto;
+            width: 10vw;
+            animation-name: infiniterotatinglogo;
+            animation-duration: 1.5s;
+            animation-iteration-count: 10;
+            animation-timing-function: linear;
+        }
+
+        .incoming {
+            animation-name: incominglogo;
+            animation-duration: 0.8s;
+            animation-timing-function: linear;
+        }
+
+        .nonsense {
+            text-align: center;
+            margin-top: 2vh;
+            }
+
+
+       .nonsense span {
+            display: block;
+            position: relative;
+            top: 3vh;
+            opacity: 0;
+            font-style: italic;
+            padding: 0.5vh;
+        }
+
+        #revealing {
+            top: 0;
+            opacity: 1;
+            transition-duration: 1.5s;
+        }
+
+        .maininitialcontainer {
+            position: relative;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+
+    </style>
     <link rel="stylesheet" href="biotacssshared.css">
     <link rel="stylesheet" href="biota.css">
 </head>
 <body>
+
+
+    <div class="supercontainer">
 
     <header> Due to the emergency lockdown procedures to our worldwide facilities because of the MICI
         (Metabolic Inactivation and Cryptobiosis-Inducing) pandemic, our non-virology research has been ceased
@@ -35,9 +127,37 @@
 
             <div class="buttonaki"></div>
         </div>
+        </div>
 
-        <script src="biotajsshared.js"></script>
-        <script src="biotajs.js"></script>
+        <div class="superinitialcontainer">
+            <div class="maininitialcontainer">
+                <div class="incoming">
+                    <img src="phylocircle22.png">
+                </div>
+                <div class="nonsense">
+                    <span>Calculating speciation...</span>
+                    <span>Preparing viral therapies...</span>
+                    <span>Engineering human genomes...</span>
+                    <span>Replacing glandular hormones...</span>
+                    <span> Commencing laboratory irradiations...</span>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            const spanakia = document.querySelectorAll(".nonsense span");
+            let timeout = 500;
+ 
+
+                for (const iteration of spanakia) {
+                        setTimeout(() => {
+                            iteration.id = "revealing";
+                        }, timeout);
+                        timeout += 500;
+                    };
+            </script>
+            <script src="biotajsshared.js"></script>
+            <script src="biotajs.js"></script>
 
 </body>
 

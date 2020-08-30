@@ -14,12 +14,6 @@
         }
 
 
-        nav {
-            padding: 5px;
-            position: relative;
-        }
-
-
         nav a {
             padding: 22px;
             text-decoration: none;
@@ -129,10 +123,12 @@ By setting the following, we bring the ::after box right below the CONTENT of th
             animation-duration: 3s;
             /* margin-bottom keeps the .mainbox at steady distance from nav, otherwise nav will fall upon it when descending. */
             margin-bottom: 80px;
-            margin-top: 10px;
+            margin-top: 7vh;
             animation-iteration-count: 2;
            animation-direction: alternate;
            animation-fill-mode: forwards;
+           padding: 5px;
+           animation-play-state: paused;
         }
 
         

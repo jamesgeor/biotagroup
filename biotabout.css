@@ -84,6 +84,11 @@
             animation-duration: 3s;
             animation-fill-mode: forwards;
         }
+
+        .slash1moving {
+            top: 2vh;
+            left: 7vw;
+        }
         /*
 
         .maincontainer .words {

@@ -3,7 +3,7 @@ var nava = document.querySelector("nav");
 //This code pauses the header animation just when it has descended fully.
 setTimeout(function () {
     nava.style.animationPlayState = "paused"
-}, 2501);
+}, 8001);
 
 var logo = document.querySelector("nav img");
 var rotated = false;

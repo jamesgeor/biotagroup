@@ -11,6 +11,7 @@
            animation-iteration-count: 2;
            animation-direction: alternate;
            animation-fill-mode: forwards;
+           animation-play-state: paused;
         }
 
 

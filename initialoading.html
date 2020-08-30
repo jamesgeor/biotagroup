@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biota Group</title>
+    <style>
+        @keyframes backscreencolors {
+            from {background-color: #001226;}
+            to {background-color: black;}
+        }
+
+        @keyframes incominglogo {
+            from {transform: scale(0);}
+            to {transform: scale(1);}
+        }
+
+        @keyframes infiniterotatinglogo {
+            from {transform: rotate(0);}
+            to {transform: rotate(360deg);}
+        }
+
+        @keyframes retreatingsuperinitialcontainer {
+            from {bottom: 0;}
+            to {bottom: 100vh;}
+        }
+        
+        * {color: white;}
+
+        body {
+            padding: 0;
+            margin: 0;
+        }
+
+        .superinitialcontainer {
+            animation-name: backscreencolors, retreatingsuperinitialcontainer;
+            animation-delay: 0s, 5s;
+            animation-duration: 0.8s;
+            animation-iteration-count: 10, 1;
+            animation-direction: alternate;
+            animation-timing-function: linear, ease-out;
+            animation-fill-mode: forwards;
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        .incoming img {
+            display: block;
+            margin: auto;
+            width: 10vw;
+            animation-name: infiniterotatinglogo;
+            animation-duration: 1.5s;
+            animation-iteration-count: 10;
+            animation-timing-function: linear;
+        }
+
+        .incoming {
+            animation-name: incominglogo;
+            animation-duration: 0.8s;
+            animation-timing-function: linear;
+        }
+
+        .nonsense {
+            text-align: center;
+            margin-top: 2vh;
+            }
+
+
+       .nonsense span {
+            display: block;
+            position: relative;
+            top: 3vh;
+            opacity: 0;
+            font-style: italic;
+            padding: 0.5vh;
+        }
+
+        #revealing {
+            top: 0;
+            opacity: 1;
+            transition-duration: 2s;
+        }
+
+        .maininitialcontainer {
+            position: relative;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <div class="superinitialcontainer">
+    <div class="maininitialcontainer">
+        <div class="incoming">
+            <img src="phylocircle22.png">
+        </div>
+        <div class="nonsense">
+            <span>Calculating speciation...</span>
+            <span>Preparing viral therapies...</span>
+            <span>Engineering human genomes...</span>
+            <span>Replacing glandular hormones...</span>
+            <span> Commencing laboratory irradiations...</span>
+        </div>
+    </div>
+    </div>
+    
+
+    <script>
+        const spanakia = document.querySelectorAll(".nonsense span");
+        let timeout = 1000;
+        for (const iteration of spanakia) {
+            setTimeout(() => {
+                iteration.id ="revealing";
+            }, timeout);
+            timeout+=500;
+        }
+    </script>
+</body>
+</html>
